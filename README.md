@@ -1,2 +1,5 @@
-# Sistem-Manajemen-Blog
-Sistem manajemen blog
+**Sistem Manajemen Blog (CMS)** adalah aplikasi web berbasis PHP untuk mengelola konten blog secara efisien. Aplikasi ini memungkinkan pengguna mengelola data penulis, artikel, dan kategori artikel dalam satu antarmuka terintegrasi, dengan seluruh operasi berjalan secara *asynchronous* menggunakan Fetch API tanpa reload halaman.
+
+Dibangun menggunakan PHP, MySQL, dan JavaScript, aplikasi ini dilengkapi fitur CRUD lengkap pada setiap modul. Modul **Kelola Penulis** memungkinkan penambahan, pengeditan, dan penghapusan data penulis beserta foto profil. Modul **Kelola Artikel** mendukung manajemen artikel dengan relasi ke data penulis dan kategori, dilengkapi pencatatan tanggal otomatis sesuai zona waktu Asia/Jakarta. Modul **Kelola Kategori** memudahkan pengelompokan artikel berdasarkan topik yang telah ditentukan.
+
+Dari sisi keamanan, aplikasi menerapkan enkripsi password menggunakan *bcrypt*, validasi tipe file dengan fungsi `finfo`, pembatasan ukuran file maksimal 2 MB, sanitasi output dengan `htmlspecialchars()`, serta proteksi folder upload melalui `.htaccess` untuk mencegah eksekusi file berbahaya. Seluruh operasi database menggunakan *prepared statements* guna mencegah serangan SQL Injection.
